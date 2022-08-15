@@ -1,7 +1,7 @@
 package FREngine;
 
 import FREngine.containers.FRState;
-import FREngine.sprites.FRSprite;
+import FREngine.objects.bitmap.FRBitmap;
 
 import FREngine.utils.TypeCheck;
 
@@ -21,14 +21,15 @@ class FRGame {
 	
 	public function add(object:Dynamic) {
 		switch (TypeCheck.getTypeName(object)) {
-			case "FREngine.sprites.FRSprite":
-				var sprite:FRSprite = object;
-				sprite.add();
-				assets.push(sprite);
+			case "FREngine.objects.bitmap.FRBitmap":
+				var bitmap:FRBitmap = object;
+				bitmap.add();
+				assets.push(bitmap);
 			case "FREngine.containers.FRState":
 				var state:FRState = object;
 				if (currentGameState == null)
 					currentGameState = state;
+				assets.push(state);
 			case null:
 				trace('fuck');
 		}
