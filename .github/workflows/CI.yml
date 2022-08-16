@@ -30,6 +30,7 @@ jobs:
           haxelib run lime setup
           haxelib list
       - name: Compile
+        run: mv ~/src/FREngine ~/src/frEngine
         run: haxelib run openfl build linux -release
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
