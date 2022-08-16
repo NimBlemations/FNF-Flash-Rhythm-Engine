@@ -27,11 +27,11 @@ class FRGame extends Sprite {
 	 */
 	public function add(object:Dynamic) {
 		switch (TypeCheck.getTypeName(object)) {
-			case "FREngine.objects.bitmap.FRBitmap":
+			case "frEngine.objects.sprites.FRSprite":
 				var bitmap:FRSprite = object;
 				bitmap.add();
 				assets.push(bitmap);
-			case "FREngine.containers.FRState":
+			case "frEngine.containers.FRState":
 				var state:FRState = object;
 				if (currentGameState == null)
 					currentGameState = state;
