@@ -32,7 +32,8 @@ jobs:
       - name: Compile
         run: |
           ls -a
-          mv /src/FREngine /src/frEngine && haxelib run openfl build linux -release || echo "fuck"
+          mv src/FREngine src/frEngine
+          haxelib run openfl build linux -release
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
