@@ -1,21 +1,23 @@
-package FREngine.utils;
+package frEngine.utils;
+
+import Type;
 
 /**
- * ...
- * @author ...
+ * Checks types.
+ * @author tienary
  */
 class TypeCheck {
 	
 	// Credit to https://community.openfl.org/t/tutorial-get-the-type-name-not-type-value/1736
 	
 	public static function getTypeName(object:Dynamic):String {
-		switch (Type.typeof(object)) {
-			case ValueType.TEnum:
-				return Type.getEnumName(Type.getEnum(object));
-			case ValueType.TClass:
-				return Type.getClassName(Type.getClass(obj));
+		switch(Type.typeof(object)) {
+			case TEnum(object):
+				return Type.getEnumName(object);
+			case TClass(object):
+				return Type.getClassName(object);
 			default:
-				return null;
+				return "";
 		}
 	}
 	

@@ -1,28 +1,34 @@
-package FREngine;
+package frEngine;
 
-import FREngine.containers.FRState;
-import FREngine.objects.bitmap.FRBitmap;
+import frEngine.containers.FRState;
+import frEngine.objects.sprites.FRSprite;
 
-import FREngine.utils.TypeCheck;
+import frEngine.utils.TypeCheck;
+
+import openfl.display.Sprite;
 
 /**
  * ...
- * @author ...
+ * @author Nimblemations
  */
-class FRGame {
+class FRGame extends Sprite {
 
 	public static var currentGameState:FRState;
 	
 	public var assets:Array<Dynamic> = [];
 	
 	public function new() {
-		
+		super();
 	}
 	
+	/**
+	 * Add an object to array.
+	 * @param object Object to be added to array.
+	 */
 	public function add(object:Dynamic) {
 		switch (TypeCheck.getTypeName(object)) {
 			case "FREngine.objects.bitmap.FRBitmap":
-				var bitmap:FRBitmap = object;
+				var bitmap:FRSprite = object;
 				bitmap.add();
 				assets.push(bitmap);
 			case "FREngine.containers.FRState":
@@ -33,6 +39,10 @@ class FRGame {
 			case null:
 				trace('fuck');
 		}
+	}
+	
+	public function update(deltaTime:Float) {
+		trace(deltaTime);
 	}
 	
 }

@@ -1,4 +1,4 @@
-package FREngine.containers;
+package frEngine.containers;
 
 /**
  * ...
@@ -6,7 +6,7 @@ package FREngine.containers;
  */
 class FRState {
 
-	public var curCamera;
+	// public var curCamera;
 	
 	public var objects:Array<Dynamic> = [];
 	

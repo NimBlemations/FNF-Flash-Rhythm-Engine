@@ -3,13 +3,13 @@
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="Flash Rhythm Engine" package="FlashRhythmEngineFNF" version="0.0.1" company="Nimblemations" />
+	<meta title="Flash Rhythm Engine" package="com.nimblemations.flashrhythmengine" version="0.0.1" company="Nimblemations" />
 	
 	<!-- output -->
 	<app main="Main" file="FREngine" path="bin" />
 	
 	<window background="#000000" fps="120" />
-	<window width="800" height="480" unless="mobile" />
+	<window width="1280" height="720" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
 	<!-- classpath, haxe libs -->
