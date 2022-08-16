@@ -23,6 +23,15 @@ typedef AtlasFrame = {
 }
 
 /**
+ * Atlas animation
+ */
+typedef AtlasAnimation = {
+	public var name:String;
+	public var fps:Int;
+	public var frames:Array<AtlasFrame>;
+}
+
+/**
  * A sprite that includes a spritesheet bitmap.
  * The bitmap crops to the current frame selected.
  * @author Nimblemations
@@ -34,7 +43,7 @@ class AtlasSprite extends FRSprite {
 	public var frames:Array<AtlasFrame>;
 	public var offset:Array<Int> = [0, 0];
 	
-	public function new() {
+	public function new(spriteSheet:Bitmap, ) {
 		
 	}
 	

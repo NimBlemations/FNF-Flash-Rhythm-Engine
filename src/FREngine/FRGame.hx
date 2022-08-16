@@ -26,12 +26,12 @@ class FRGame extends Sprite {
 	 * @param object Object to be added to array.
 	 */
 	public function add(object:Dynamic) {
-		switch (TypeCheck.getTypeName(object)) {
-			case "frEngine.objects.sprites.FRSprite":
+		switch (Type.getClass(object)) {
+			case FRSprite: // would this be better?
 				var bitmap:FRSprite = object;
 				bitmap.add();
 				assets.push(bitmap);
-			case "frEngine.containers.FRState":
+			case FRState:
 				var state:FRState = object;
 				if (currentGameState == null)
 					currentGameState = state;
