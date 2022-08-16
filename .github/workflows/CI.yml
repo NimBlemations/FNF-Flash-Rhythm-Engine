@@ -31,6 +31,7 @@ jobs:
           haxelib list
       - name: Compile
         run: |
+          ls -a
           mv ~/src/FREngine ~/src/frEngine
           haxelib run openfl build linux -release
       - name: Publish Artifact
