@@ -1,6 +1,6 @@
 package frEngine.objects.sprites;
 
-import haxe.Xml;
+import Xml;
 
 import openfl.display.Bitmap;
 import openfl.utils.Dictionary;
@@ -23,7 +23,7 @@ typedef AtlasFrame = {
 }
 
 /**
- * Atlas animation
+ * Atlas animation set.
  */
 typedef AtlasAnimation = {
 	public var name:String;
@@ -43,7 +43,8 @@ class AtlasSprite extends FRSprite {
 	public var frames:Array<AtlasFrame>;
 	public var offset:Array<Int> = [0, 0];
 	
-	public function new(spriteSheet:Bitmap, ) {
+	public function new(spriteSheet:Bitmap) {
+		super();
 		
 	}
 	

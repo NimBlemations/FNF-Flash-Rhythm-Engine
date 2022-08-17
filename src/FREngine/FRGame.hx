@@ -2,13 +2,14 @@ package frEngine;
 
 import frEngine.containers.FRState;
 import frEngine.objects.sprites.FRSprite;
+import frEngine.objects.sprites.AtlasSprite;
 
 import frEngine.utils.TypeCheck;
 
 import openfl.display.Sprite;
 
 /**
- * ...
+ * The main runny part of the FR Engine.
  * @author Nimblemations
  */
 class FRGame extends Sprite {
@@ -42,6 +43,20 @@ class FRGame extends Sprite {
 	}
 	
 	public function update(deltaTime:Float) {
+		if (assets.length > 0) {
+			for (object in assets) {
+				switch (Type.getClass(object)) {
+					case FRSprite | AtlasSprite: // would this be better?
+						var bitmap:FRSprite = object;
+						bitmap.update(deltaTime);
+					case FRState:
+						var state:FRState = object;
+						state.update(deltaTime);
+					case null:
+						trace('dammit');
+				}
+			}
+		}
 		trace(deltaTime);
 	}
 	

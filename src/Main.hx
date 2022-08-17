@@ -4,10 +4,11 @@ import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.Lib;
 import openfl.Assets;
-import haxe.Timer;
 
 import frEngine.FRGame;
 import frEngine.containers.FRState;
+
+import frGame.meta.states.TitleState;
 
 /**
  * ...
@@ -27,6 +28,7 @@ class Main extends Sprite {
 		
 		game = new FRGame();
 		addChild(game);
+		game.add(new TitleState());
 		
 		cacheTime = Lib.getTimer();
 		

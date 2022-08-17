@@ -32,7 +32,7 @@ jobs:
       - name: Compile
         run: |
           ls -a
-          mv src/FREngine src/frEngine && echo 'Holy shit no wayyyy'
+          mv src/FREngine src/frEngine
           haxelib run openfl build linux -release
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
@@ -116,7 +116,7 @@ jobs:
       - name: Compile
         run: |
           ls -a
-          mv src/FREngine src/frEngine && echo 'Holy shit no wayyyy'
+          mv src/FREngine src/frEngine
           haxelib run openfl build html5 -release
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
