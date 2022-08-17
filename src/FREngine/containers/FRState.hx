@@ -14,7 +14,7 @@ class FRState {
 	public var objects:Array<Dynamic> = [];
 	
 	public function new() {
-		super();
+		
 	}
 	
 	/**
@@ -28,7 +28,7 @@ class FRState {
 				bitmap.add();
 				objects.push(bitmap);
 			case null:
-				trace('fuck');
+				trace('darnit dagnabbit');
 		}
 	}
 	

@@ -11,7 +11,7 @@ import frEngine.containers.FRState;
 import frGame.meta.states.TitleState;
 
 /**
- * ...
+ * The thing that does stuff.
  * @author Nimblemations
  */
 class Main extends Sprite {

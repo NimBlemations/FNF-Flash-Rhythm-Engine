@@ -4,7 +4,7 @@ import frEngine.containers.FRState;
 
 /**
  * ...
- * @author Axel Annand
+ * @author Nimblemations
  */
 class TitleState extends FRState {
 
